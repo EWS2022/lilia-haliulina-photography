@@ -1,3 +1,4 @@
+let body = document.querySelector('body');
 let hamburger = document.querySelector('.hamburger');
 let navLinks = document.querySelector('.nav__links');
 let navLinksAll = document.querySelectorAll('.nav__links a');
@@ -6,6 +7,7 @@ let formWrapper = document.querySelector('.form__wrapper');
 hamburger.onclick = function(){
     hamburger.classList.toggle('hamburger_active');
     navLinks.classList.toggle('nav__links_active');
+    body.classList.toggle('scroll__none');
 }
 
 for (let navLinksNumber = 0; navLinksNumber < 4; navLinksNumber++){
@@ -13,6 +15,7 @@ for (let navLinksNumber = 0; navLinksNumber < 4; navLinksNumber++){
     navLinksAll[navLinksNumber].onclick = function(){
         hamburger.classList.remove('hamburger_active');
         navLinks.classList.remove('nav__links_active');
+        body.classList.remove('scroll__none');
     }
 }
 
